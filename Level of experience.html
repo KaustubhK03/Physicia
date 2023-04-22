@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+    <title>Physicia</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            vertical-align: middle;
+        }
+
+        th {
+            text-transform: capitalize;
+            background-color: #ccc;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #e6e6e6;
+        }
+
+        body {
+            background-image: url("https://img.freepik.com/free-vector/gym-interior-illustration_1262-16321.jpg?w=826&t=st=1669037354~exp=1669037954~hmac=ab62d7ccbe5f76267533dbbc7bc567a1f42a68cb7ebc66aa7a1bf3bddf98316c");
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: #fff;
+            margin-top: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 100px;
+        }
+
+        label {
+            color: #fff;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        select {
+            width: 200px;
+            height: 40px;
+            border: none;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        option {
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            width: 150px;
+            height: 40px;
+            background-color: #ff6b6b;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<?php include 'process_form.php'; ?>
+<h1>Welcome to Physicia</h1>
+<form action="process_form.php" method="POST">
+    <label for="experience">Select your level of experience:</label>
+    <select id="experience" name="experience">
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+    </select>
+    <input type="submit" value="Workout Schedule">
+</form>
+</body>
+</html>
